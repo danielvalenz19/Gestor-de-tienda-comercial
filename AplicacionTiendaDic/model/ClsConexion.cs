@@ -26,7 +26,6 @@ namespace AplicacionTienda.model
             {
                 conex.ConnectionString = cadenaConexion;
                 conex.Open();
-                MessageBox.Show("se logro conectar a la base de datos CORRECTAMENTE");
 
             }
             catch (MySqlException e)

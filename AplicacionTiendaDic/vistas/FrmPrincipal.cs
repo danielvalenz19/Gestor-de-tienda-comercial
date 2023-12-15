@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AplicacionTienda.model;
+using AplicacionTiendaDic.controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,44 @@ namespace AplicacionTiendaDic.vistas
 {
     public partial class FrmPrincipal : Form
     {
+        private ClsProductos clsProductosModel = new ClsProductos();
+
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            FrmPuebas frmPuebas = new FrmPuebas();
-            frmPuebas.Show();
+            CargarProductos();
+
+        }
+        private void CargarProductos()
+        {
+            ClsProductos clsProductos = new ClsProductos();
+            dgvPrincipal.DataSource = clsProductos.ObtenerTodosUsuarios();
+        }
+
+        private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ActualizarResultadosBusqueda();
+
+        }
+        private void ActualizarResultadosBusqueda()
+        {
+            string palabraClave = txtBusqueda.Text.Trim();
+            dgvPrincipal.DataSource = clsProductosModel.BuscarProductos(palabraClave);
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            ActualizarResultadosBusqueda();
+
         }
     }
 }

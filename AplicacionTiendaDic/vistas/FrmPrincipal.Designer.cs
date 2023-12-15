@@ -28,32 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            dgvPrincipal = new DataGridView();
+            txtBusqueda = new TextBox();
+            btnBuscar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvPrincipal).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // dgvPrincipal
             // 
-            button1.Location = new Point(286, 137);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            dgvPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPrincipal.Location = new Point(234, 184);
+            dgvPrincipal.Name = "dgvPrincipal";
+            dgvPrincipal.Size = new Size(551, 264);
+            dgvPrincipal.TabIndex = 0;
+            dgvPrincipal.CellContentClick += dgvPrincipal_CellContentClick;
+            // 
+            // txtBusqueda
+            // 
+            txtBusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtBusqueda.Location = new Point(324, 133);
+            txtBusqueda.Multiline = true;
+            txtBusqueda.Name = "txtBusqueda";
+            txtBusqueda.Size = new Size(250, 33);
+            txtBusqueda.TabIndex = 1;
+            txtBusqueda.TextChanged += txtBusqueda_TextChanged;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(234, 133);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(75, 23);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(858, 517);
-            Controls.Add(button1);
+            ClientSize = new Size(910, 545);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtBusqueda);
+            Controls.Add(dgvPrincipal);
             Name = "FrmPrincipal";
-            Text = "Principal";
+            Text = "FrmPrincipal";
+            Load += FrmPrincipal_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvPrincipal).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private DataGridView dgvPrincipal;
+        private TextBox txtBusqueda;
+        private Button btnBuscar;
     }
 }

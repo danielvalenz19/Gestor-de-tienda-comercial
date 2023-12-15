@@ -30,3 +30,4 @@ C:\Repositorios\C#\AplicacionTiendaDic\AplicacionTiendaDic\obj\Debug\net8.0-wind
 C:\Repositorios\C#\AplicacionTiendaDic\AplicacionTiendaDic\obj\Debug\net8.0-windows\AplicacionTiendaDic.pdb
 C:\Repositorios\C#\AplicacionTiendaDic\AplicacionTiendaDic\obj\Debug\net8.0-windows\AplicacionTiendaDic.genruntimeconfig.cache
 C:\Repositorios\C#\AplicacionTiendaDic\AplicacionTiendaDic\obj\Debug\net8.0-windows\ref\AplicacionTiendaDic.dll
+C:\Repositorios\C#\AplicacionTiendaDic\AplicacionTiendaDic\obj\Debug\net8.0-windows\AplicacionTiendaDic.sourcelink.json
