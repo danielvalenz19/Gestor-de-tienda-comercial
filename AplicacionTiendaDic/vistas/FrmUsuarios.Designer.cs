@@ -57,6 +57,7 @@
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.Size = new Size(739, 282);
             dgvUsuarios.TabIndex = 0;
+            dgvUsuarios.SelectionChanged += dgvUsuarios_SelectionChanged;
             // 
             // panel2
             // 
@@ -192,7 +193,7 @@
             // cmbTipoUsuario
             // 
             cmbTipoUsuario.FormattingEnabled = true;
-            cmbTipoUsuario.Items.AddRange(new object[] { "", "Administrador", "Usuario" });
+            cmbTipoUsuario.Items.AddRange(new object[] { "Administrador", "Usuario" });
             cmbTipoUsuario.Location = new Point(414, 191);
             cmbTipoUsuario.Name = "cmbTipoUsuario";
             cmbTipoUsuario.Size = new Size(183, 23);
@@ -207,6 +208,7 @@
             btnActualizar.TabIndex = 21;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // FrmUsuarios
             // 

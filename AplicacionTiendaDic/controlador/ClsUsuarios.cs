@@ -73,7 +73,39 @@ namespace AplicacionTiendaDic.controlador
                 conexion.Close();
             }
         }
-    }
+        // Método para actualizar un usuario existente
+        public void ActualizarUsuario(string id, string nombre, string apellido, string edad, string contraseña)
+        {
+            MySqlConnection conexion = new ClsConexion().establecerConexion();
 
+            try
+            {
+                string query = "UPDATE Usuarios SET Nombre = @Nombre, Apellido = @Apellido, Edad = @Edad, Contraseña = @Contraseña WHERE UserId = @UserId";
+
+                using (MySqlCommand command = new MySqlCommand(query, conexion))
+                {
+                    command.Parameters.AddWithValue("@UserId", id);
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    command.Parameters.AddWithValue("@Apellido", apellido);
+                    command.Parameters.AddWithValue("@Edad", edad);
+                    command.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Usuario actualizado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el usuario: " + ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+    }
 }
+
+
 
