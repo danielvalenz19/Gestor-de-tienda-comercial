@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AplicacionTiendaDic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ceaa616aae26e75ce79dacb9663301b3b9770a77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AplicacionTiendaDic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AplicacionTiendaDic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,5 +4,8 @@
     <Compile Update="vistas\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="vistas\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
